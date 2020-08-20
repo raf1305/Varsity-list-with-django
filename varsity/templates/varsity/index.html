@@ -1,0 +1,34 @@
+{% extends 'varsity/base.html' %}
+
+{% block title %} Homepage {% endblock %}
+
+{% block heading %}  {% endblock %}
+
+{% block style %}
+<style>
+    .list{
+        list-style: none;
+        text-align: center;
+    }
+    .list li{
+        margin:15px;
+        padding: 10px;
+    }
+    .list li a{
+        border: 2px blue solid;
+        border-radius: 5px;
+        margin: 0;
+        padding: 10px;
+        
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<ul class="list-group list-group-flush text-center">
+    <li class="list-group-item"><a href="{% url 'Engineering' %}">Engineering University</a></li>
+    <li class="list-group-item"><a href="{% url 'Agricultural' %}">Agricultural University</a></li>
+    <li class="list-group-item"><a href="{% url 'General' %}">General University</a></li>
+    <li class="list-group-item"><a href="{% url 'Science&Technology' %}">Science & Technology University</a></li>
+  </ul>
+{% endblock %}

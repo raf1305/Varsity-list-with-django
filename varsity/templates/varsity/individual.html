@@ -1,0 +1,18 @@
+{% extends 'varsity/base.html' %}
+
+{% block title %}Details{% endblock %}
+
+{% block heading %} {{var.univarsity_name}} {% endblock %}
+
+{% block content %}
+<div class="container">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Founded : </strong>{{var.foundation}}</li>
+        <li class="list-group-item"><strong>Location : </strong>{{var.location}}</li>
+        <li class="list-group-item"><strong>Division : </strong>{{var.division}}</li>
+        <li class="list-group-item"><strong>Speciality : </strong>{{var.specailization}}</li>
+        <li class="list-group-item"><strong>Ph.D. Granting : </strong>{{var.phdgranting}}</li>
+        <li class="list-group-item"><a href="{{var.link}}"><strong>Link : </strong>{{var.link}}</a></li>
+      </ul>
+</div>
+{% endblock %}

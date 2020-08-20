@@ -1,0 +1,36 @@
+{% extends 'varsity/base.html' %}
+
+{% block title %} Search{% endblock %}
+
+{% block heading %} Search Results {% endblock %}
+
+{% block content %}
+<div class="container">
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Name</th>
+        <th scope="col">Nickname</th>
+        <th scope="col">Foundation Year</th>
+        <th scope="col">Speciality</th>
+        <th scope="col">Category</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for i in var %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td><a href="{% url 'Individual' i.univarsity_nickname %}">{{i.univarsity_name}}</a></td>
+        <td>{{i.univarsity_nickname}}</td>
+        <td>{{i.foundation}}</td>
+        <td>{{i.specailization}}</td>
+        <td>{{i.category}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
